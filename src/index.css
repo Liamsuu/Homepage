@@ -1,0 +1,85 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-clr);
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+:root {
+  --background-clr: #ecfeff;
+  --heading-clr: #292524;
+  --text-clr: #57534e;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(./assets/fonts/Roboto/Roboto-Black.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: "playfair";
+  src: url(./assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf)
+    format("ttf");
+}
+
+header {
+  width: 100vw;
+  background-color: #06b6d4;
+}
+
+/* Mobile devices */
+@media (max-width: 480px) and (min-width: 320px) {
+  body {
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    display: flex;
+    height: 28rem;
+    justify-content: center;
+    transform: skewY(-18deg) translateY(-5rem);
+  }
+  header picture {
+    position: relative;
+    transform: skewY(18deg) translateY(6rem);
+  }
+
+  header picture p {
+    font-family: playfair;
+    color: #ecfeff;
+    font-size: 4rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    margin: 0;
+    font-weight: 500;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    align-items: center;
+  }
+  h2 {
+    font-family: playfair;
+    font-weight: 400;
+    font-size: 2.8rem;
+    color: var(--heading-clr);
+    margin-bottom: 0;
+  }
+  #description {
+    text-align: left;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    color: var(--heading-clr);
+    font-family: roboto;
+  }
+}
+/* Tablet devices */
+@media (max-width: 768px) and (min-width: 481px) {
+}
+
+/* Laptop and desktop devices */
+@media (max-width: 1200px) and (min-width: 769px) {
+}

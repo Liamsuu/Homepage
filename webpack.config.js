@@ -28,7 +28,7 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
+        use: ["url-loader"],
       },
       {
         test: /\.(?:js|mjs|cjs)$/,
@@ -39,6 +39,10 @@ module.exports = {
             presets: [["@babel/preset-env", { targets: "defaults" }]],
           },
         },
+      },
+      {
+        test: /\.html$/i,
+        use: ["html-loader"],
       },
     ],
   },
