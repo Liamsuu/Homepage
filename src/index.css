@@ -107,14 +107,41 @@ header {
     display: grid;
     grid-template-rows: 1.5fr 1fr;
     grid-template-columns: 1fr;
-    background-color: blue;
-    border: 1px solid black;
+    background-color: #fafafa;
+    box-shadow: 1px 4px 5px 5px #dce4ee;
+    color: var(--text-clr);
     /* inside each create a grid with 2 rows screenshot and desc, style as needed */
   }
   .projects-preview {
     object-fit: fill;
     width: 100%;
     height: 14rem;
+  }
+  .project-headings {
+    padding-left: 2rem;
+    font-family: playfair;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .project-descriptions div a img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .project-desc-top {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5rem;
+    padding-right: 2rem;
+  }
+
+  .project-desc-bottom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: roboto;
   }
 
   #work-section {
@@ -132,7 +159,10 @@ header {
     text-align: center;
   }
   #contact-info {
+    display: flex;
+    flex-direction: column;
     padding: 0 1rem;
+    align-items: center;
   }
 
   footer div a img {
