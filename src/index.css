@@ -30,7 +30,6 @@ header {
 /* Mobile devices */
 @media (max-width: 480px) and (min-width: 320px) {
   body {
-    height: 300vh;
     display: flex;
     flex-direction: column;
   }
@@ -94,6 +93,31 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  #project-wrapper {
+    display: grid;
+    width: 90vw;
+    height: 170rem;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .project-box {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+    grid-template-columns: 1fr;
+    background-color: blue;
+    border: 1px solid black;
+    /* inside each create a grid with 2 rows screenshot and desc, style as needed */
+  }
+  .projects-preview {
+    object-fit: fill;
+    width: 100%;
+    height: 14rem;
+  }
+
+  #work-section {
+    padding-bottom: 20vh;
   }
 }
 /* Tablet devices */
