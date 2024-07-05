@@ -9,6 +9,7 @@ body {
   --background-clr: #ecfeff;
   --heading-clr: #164e63;
   --text-clr: #57534e;
+  --header-footer-clr: #0891b2;
 }
 
 @font-face {
@@ -24,7 +25,7 @@ body {
 
 header {
   width: 100vw;
-  background-color: #0891b2;
+  background-color: var(--header-footer-clr);
 }
 
 /* Mobile devices */
@@ -118,6 +119,27 @@ header {
 
   #work-section {
     padding-bottom: 20vh;
+  }
+
+  footer {
+    color: #ecfeff;
+    background-color: var(--header-footer-clr);
+  }
+
+  footer h2 {
+    color: #ecfeff;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  #contact-info {
+    padding: 0 1rem;
+  }
+
+  footer div a img {
+    height: 2rem;
+    width: 2rem;
+    filter: brightness(0) saturate(100%) invert(93%) sepia(1%) saturate(6307%)
+      hue-rotate(184deg) brightness(99%) contrast(118%);
   }
 }
 /* Tablet devices */
