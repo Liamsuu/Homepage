@@ -180,8 +180,14 @@ footer div a img {
     hue-rotate(184deg) brightness(99%) contrast(118%);
 }
 
+#footer-image {
+  width: 100%;
+  height: auto;
+  padding-top: 3rem;
+}
+
 /* Tablet devices */
-@media (max-width: 768px) and (min-width: 481px) {
+@media (max-width: 768px) and (min-width: 626px) {
   header {
     transform: skewY(-18deg) translateY(-10rem);
   }
@@ -196,21 +202,13 @@ footer div a img {
   }
 
   #name {
-    position: absolute;
-    top: 2rem;
-    box-shadow: none;
-    height: max-content;
-    width: max-content;
-    font-size: 2rem;
-    background-color: transparent;
-    text-wrap: nowrap;
-    color: #fafafa;
+    display: none;
   }
 
   #larger-sizes-image {
     display: block;
-    height: 70%;
-    width: 80%;
+    max-height: 80%;
+    max-width: 80%;
     padding-top: 1rem;
     padding-right: 1rem;
     text-wrap: wrap;
@@ -241,7 +239,14 @@ footer div a img {
     padding-left: 10%;
     padding-right: 10%;
   }
+  #tablet-name {
+    position: absolute;
+    bottom: 25rem;
 
+    font-size: 2rem;
+    font-family: playfair;
+    color: #ecfeff;
+  }
   #larger-screen-about-me {
     display: block;
     background-color: red;
@@ -251,11 +256,40 @@ footer div a img {
     transform: skewY(18deg) translateY(17rem);
   }
 
-  footer {
-    margin-top: auto;
-  }
   #mobile-about-section {
     display: none;
+  }
+
+  main {
+    margin-top: 3rem;
+  }
+
+  #project-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 80rem;
+  }
+
+  .project-box {
+    max-height: 420px;
+    min-width: 260px;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+  }
+
+  footer h2,
+  footer div {
+    margin-right: auto;
+  }
+
+  #footer-image {
+    height: 20rem;
+    width: 50%;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
   }
 }
 
