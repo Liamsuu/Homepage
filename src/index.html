@@ -6,20 +6,36 @@
   </head>
   <body>
     <header>
-      <picture id="header-portrait">
-        <source
-          media="(max-width: 480px)"
-          srcset="./assets/images/portrait/placeholder-small.jpeg"
-        />
-        <img
-          src="./assets/images/portrait/placeholder-standard.jpeg"
-          alt="Placeholder of man"
-        />
-        <p>John Doe</p>
-      </picture>
+      <!-- used for mobile screens -->
+      <img
+        id="mobile-header-image"
+        src="./assets/images/portrait/placeholder-small.jpeg"
+        alt="Placeholder portrait"
+      />
+      <p id="larger-sizes-image">
+        <picture id="header-portrait">
+          <source
+            media="(max-width: 480px)"
+            srcset="./assets/images/portrait/placeholder-small.jpeg"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="./assets/images/portrait/placeholder-medium.jpeg"
+          />
+          <img
+            src="./assets/images/portrait/placeholder-standard.jpeg"
+            alt="Placeholder of man"
+          />
+        </picture>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe cum
+        maiores necessitatibus sit architecto veritatis dolorum, ratione et
+        voluptatibus nesciunt quaerat ullam, at est laudantium nemo odio
+        obcaecati nam beatae!sssdssdsdsdss
+      </p>
+      <p id="name">John Doe</p>
     </header>
     <main>
-      <section>
+      <section id="mobile-about-section">
         <h2>About me</h2>
         <p id="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima porro

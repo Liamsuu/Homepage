@@ -16,15 +16,11 @@
     format("ttf");
 }
 
-header {
-  width: 100vw;
-  background-color: var(--header-footer-clr);
-}
-
 /* Mobile devices */
 
 body {
   display: flex;
+  width: 100vw;
   flex-direction: column;
   padding: 0;
   margin: 0;
@@ -34,33 +30,48 @@ body {
 }
 header {
   display: flex;
-  height: 28rem;
+  height: 30rem;
+  background-color: var(--header-footer-clr);
   justify-content: center;
-  transform: skewY(-18deg) translateY(-5rem);
+  transform: skewY(-18deg) translateY(-15rem);
 }
-header picture {
-  position: relative;
-  transform: skewY(18deg) translateY(7rem);
-}
-
-header picture img {
+#mobile-header-image {
+  position: absolute;
+  transform: skewY(18deg) translateY(17rem);
+  height: max-content;
+  width: auto;
   box-shadow: 0px 2px 1px #05010169;
 }
 
-header picture p {
+#larger-sizes-image {
+  display: none;
+}
+
+header picture {
+  display: none;
+}
+
+#name {
   font-family: playfair;
   color: #ecfeff;
   font-size: 4rem;
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
+  position: relative;
+  top: 23rem;
+  right: 1rem;
   margin: 0;
   font-weight: 500;
+  transform: skewY(18deg) translateY(17rem);
+  text-wrap: nowrap;
 }
+
+#header-content-wrapper {
+  height: max-content;
+  width: max-content;
+}
+
 main {
   display: flex;
   flex-direction: column;
-  margin-top: 5vh;
   align-items: center;
 }
 h2 {
@@ -171,6 +182,81 @@ footer div a img {
 
 /* Tablet devices */
 @media (max-width: 768px) and (min-width: 481px) {
+  header {
+    transform: skewY(-18deg) translateY(-10rem);
+  }
+
+  /* continue making tablet size stuff */
+
+  #desc-socials a {
+    display: none;
+  }
+  #mobile-header-image {
+    display: none;
+  }
+
+  #name {
+    position: absolute;
+    top: 2rem;
+    box-shadow: none;
+    height: max-content;
+    width: max-content;
+    font-size: 2rem;
+    background-color: transparent;
+    text-wrap: nowrap;
+    color: #fafafa;
+  }
+
+  #larger-sizes-image {
+    display: block;
+    height: 70%;
+    width: 80%;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    text-wrap: wrap;
+    word-break: break-all;
+    background-color: #fafafa;
+    color: var(--text-clr);
+    box-shadow: 1px 4px 5px 5px #dce4ee;
+    font-size: 1.3rem;
+    top: 0rem;
+    position: relative;
+    transform: skewY(18deg) translateY(17rem);
+  }
+  header p picture {
+    display: block;
+    max-width: 40%;
+    position: relative;
+    transform: scale(1.3);
+    transform-origin: right bottom;
+    float: left;
+    margin-right: 0.5rem;
+  }
+
+  header p picture img {
+    max-width: 100%;
+  }
+
+  header {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  #larger-screen-about-me {
+    display: block;
+    background-color: red;
+    width: 55%;
+    height: 15rem;
+    font-size: 1rem;
+    transform: skewY(18deg) translateY(17rem);
+  }
+
+  footer {
+    margin-top: auto;
+  }
+  #mobile-about-section {
+    display: none;
+  }
 }
 
 /* Laptop and desktop devices */
