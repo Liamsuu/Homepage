@@ -311,24 +311,26 @@ footer div a img {
   }
   #header-portrait {
     display: block;
-    max-width: 100%;
     height: fit-content;
-    transform: translateX(-1rem) translateY(-2rem);
   }
 
   #header-portrait img {
-    min-height: 60%;
+    width: 30vw;
+    min-height: 390px;
+    transform: scale(1.2);
+    margin-right: 5rem;
   }
 
   #larger-sizes-image {
     display: flex;
-    transform: skewY(5deg) translateY(14rem);
+    transform: skewY(5deg) translateY(16rem);
     max-width: 80%;
-    height: 50%;
+    height: max-content;
     background-color: #fafafa;
     color: var(--text-clr);
     box-shadow: 1px 4px 5px 5px #dce4ee;
     font-size: 0;
+    margin-left: 7rem;
   }
 
   #name {
@@ -346,11 +348,13 @@ footer div a img {
     display: block;
     font-family: playfair;
     text-wrap: wrap;
-    height: fit-content;
+    height: max-content;
     width: 60%;
     font-size: 3vw;
   }
   #desktop-desc-text {
+    font-family: Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1.5vw;
   }
 
