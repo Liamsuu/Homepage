@@ -21,12 +21,14 @@
 body {
   display: flex;
   width: 100vw;
+  overflow: auto;
   flex-direction: column;
   padding: 0;
   margin: 0;
   background-color: var(--background-clr);
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow-x: hidden;
 }
 header {
   display: flex;
@@ -187,12 +189,10 @@ footer div a img {
 }
 
 /* Tablet devices */
-@media (max-width: 768px) and (min-width: 626px) {
+@media (max-width: 994px) and (min-width: 626px) {
   header {
     transform: skewY(-18deg) translateY(-10rem);
   }
-
-  /* continue making tablet size stuff */
 
   #desc-socials a {
     display: none;
@@ -255,6 +255,9 @@ footer div a img {
     font-size: 1rem;
     transform: skewY(18deg) translateY(17rem);
   }
+  #desktop-desc-heading {
+    display: none;
+  }
 
   #mobile-about-section {
     display: none;
@@ -291,8 +294,85 @@ footer div a img {
     padding-bottom: 2rem;
     padding-right: 2rem;
   }
+
+  #desktop-desc-heading {
+    display: none;
+  }
 }
 
 /* Laptop and desktop devices */
-@media (max-width: 1200px) and (min-width: 769px) {
+@media (min-width: 995px) {
+  header {
+    transform: skewY(-5deg) translateY(-11rem);
+    height: 40rem;
+  }
+  #mobile-header-image {
+    display: none;
+  }
+  #header-portrait {
+    display: block;
+    max-width: 100%;
+    height: fit-content;
+    transform: translateX(-1rem) translateY(-2rem);
+  }
+
+  #header-portrait img {
+    min-height: 60%;
+  }
+
+  #larger-sizes-image {
+    display: flex;
+    transform: skewY(5deg) translateY(14rem);
+    max-width: 80%;
+    height: 50%;
+    background-color: #fafafa;
+    color: var(--text-clr);
+    box-shadow: 1px 4px 5px 5px #dce4ee;
+    font-size: 0;
+  }
+
+  #name {
+    display: none;
+  }
+  #tablet-name {
+    display: none;
+  }
+
+  #mobile-about-section {
+    display: none;
+  }
+
+  #desktop-desc-heading {
+    display: block;
+    font-family: playfair;
+    text-wrap: wrap;
+    height: fit-content;
+    width: 60%;
+    font-size: 3vw;
+  }
+  #desktop-desc-text {
+    font-size: 1.5vw;
+  }
+
+  #project-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 60rem;
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+  }
+  footer h2,
+  footer div {
+    margin-right: auto;
+  }
+  #footer-image {
+    height: 30rem;
+    width: 30%;
+    padding-bottom: 2rem;
+    padding-right: 10%;
+  }
 }
